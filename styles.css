@@ -33,3 +33,23 @@
 .topic-dialog.is-expanded .dialog-header,.topic-dialog.is-expanded .dialog-footer{padding-inline:max(24px,calc((100vw - 1020px)/2))}
 @media(max-width:690px){.dialog-expand{width:34px;padding:0}.dialog-expand-label{display:none}.topic-dialog.is-expanded .dialog-scroll,.topic-dialog.is-expanded .dialog-header,.topic-dialog.is-expanded .dialog-footer{padding-inline:18px}}
 .choice:disabled{opacity:1;cursor:default}
+
+/* Long-form, topic-specific revision chapters. Preserve the established palette. */
+.revision-label{display:flex;justify-content:space-between;align-items:center;gap:14px;border-top:1px solid #dfe6d8;margin:30px 0 18px;padding-top:19px;font-size:10px;font-weight:800;letter-spacing:.11em;color:#526c47}
+.revision-label span:last-child{font-size:9px;color:#8c9a84}
+.revision-toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:23px}
+.revision-toc a{padding:7px 10px;border-radius:7px;background:#edf2e7;border:1px solid #dde6d6;font-size:11px;font-weight:700;color:#5b714f}
+.revision-toc a:hover,.revision-toc a:focus-visible{background:#dbe8cf;color:#2b422b}
+.revision-section{padding:22px 0;border-bottom:1px solid #e2e8dc;scroll-margin-top:16px}
+.revision-section h3{font:800 clamp(17px,1.6vw,21px)/1.35 var(--display);letter-spacing:-.035em;margin:7px 0 13px;color:#2a3529}
+.revision-section p,.revision-section li{font-size:13px;line-height:1.85;color:#53604f}
+.revision-section p{margin:0}
+.revision-step{font-size:9px;letter-spacing:.14em;font-weight:800;color:#8a9e76}
+.revision-steps,.revision-drills ol{padding-left:23px;margin:0;display:grid;gap:12px}
+.revision-steps li{padding-left:6px}
+.revision-walkthrough{border:1px solid #d4e4cd;background:#eaf2e5;border-radius:12px;padding:23px;margin:20px 0}
+.revision-drills{border-bottom:0}
+.revision-drills li{font-weight:650;color:#364f35}
+.revision-section .revision-tip{font-size:11px;color:#899884;margin-top:18px}
+.revision-quick{margin-top:18px}
+@media(max-width:690px){.revision-label{align-items:flex-start;flex-direction:column;gap:3px}.revision-section{padding-block:18px}.revision-walkthrough{padding:19px}.revision-toc{gap:6px}.revision-toc a{font-size:10px}}
