@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d221d">
+  <meta name="description" content="An interactive, self-paced OOP interview preparation workspace. Learn 10 modules, 15 design patterns, practice system designs, and test your knowledge.">
+  <title>OOP Studio — Interview preparation, thoughtfully organized.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<svg class="icon-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+ <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+ <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.8c3.2-1.8 6-1.7 8 0v15c-2-1.7-4.8-1.8-8 0V5.8ZM12 5.8c2-1.7 4.8-1.8 8 0v15c-3.2-1.8-6-1.7-8 0"/></symbol>
+ <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5"/></symbol>
+ <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5ZM3 7l9 5 9-5M12 12v10"/></symbol>
+ <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 1.9 7.1L21 11l-7.1 1.9L12 20l-1.9-7.1L3 11l7.1-1.9L12 2ZM19 17l.7 2.3L22 20l-2.3.7L19 23l-.7-2.3L16 20l2.3-.7L19 17Z"/></symbol>
+ <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18l-6-4-6 4V4Z"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/></symbol>
+ <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
+ <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+ <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+ <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+ <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+ <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 17V4m-5 5 5-5 5 5M4 17v4h16v-4"/></symbol>
+ <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7L20 9M20 3v6h-6"/></symbol>
+ <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+ <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+ <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+ <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 3l-4 18"/></symbol>
+ <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+ <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 5h12M9 12h12M9 19h12M3 5h.01M3 12h.01M3 19h.01"/></symbol>
+ <symbol id="i-zap" viewBox="0 0 24 24"><path d="m13 2-9 11h7l-1 9 10-12h-7l0-8Z"/></symbol>
+ <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h16M6 16l10-10 3 3-10 10H6v-3ZM15 7l3 3"/></symbol>
+ <symbol id="i-external" viewBox="0 0 24 24"><path d="M12 4H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-7M14 3h7v7M21 3 10 14"/></symbol>
+</svg>
+<div class="shell" id="shell">
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <a class="brand" href="#/overview" aria-label="OOP Studio home">
+      <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+      <span class="brand-name">oop<span>studio</span><small>THE INTERVIEW WORKSPACE</small></span>
+    </a>
+    <div class="sidebar-top-label">YOUR WORKSPACE <span>01 / 06</span></div>
+    <nav class="side-nav" id="side-nav">
+      <a class="nav-link active" data-route="overview" href="#/overview"><svg><use href="#i-grid"/></svg> Overview</a>
+      <a class="nav-link" data-route="syllabus" href="#/syllabus"><svg><use href="#i-book"/></svg> Curriculum <span class="nav-trailing" id="sidebar-count">0/0</span></a>
+      <a class="nav-link" data-route="patterns" href="#/patterns"><svg><use href="#i-layers"/></svg> Pattern atlas <span class="nav-trailing">16</span></a>
+      <a class="nav-link" data-route="design" href="#/design"><svg><use href="#i-cube"/></svg> Design lab <span class="nav-trailing">10</span></a>
+      <a class="nav-link" data-route="practice" href="#/practice"><svg><use href="#i-spark"/></svg> Practice room</a>
+      <a class="nav-link" data-route="review" href="#/review"><svg><use href="#i-bookmark"/></svg> Saved & review</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="side-progress-card">
+        <div class="side-progress-header"><span>YOUR MASTERY</span><span class="side-progress-num" id="side-progress-num">0%</span></div>
+        <div class="progress-track"><div class="progress-fill" id="side-progress-fill"></div></div>
+        <p id="side-progress-caption">Start with the foundations.</p>
+      </div>
+      <div class="sidebar-foot"><svg><use href="#i-lock"/></svg> Private. Saved in your browser.<span class="version">v1.0</span></div>
+    </div>
+  </aside>
+  <div class="content-area">
+    <header class="topbar">
+      <div class="topbar-left"><button class="icon-button menu-button" id="menu-toggle" aria-label="Open navigation" aria-expanded="false"><svg><use href="#i-menu"/></svg></button><span class="breadcrumb-home">STUDY SPACE</span><span class="breadcrumb-separator">/</span><span id="breadcrumb-current">Overview</span></div>
+      <div class="topbar-actions"><label class="search-control"><svg><use href="#i-search"/></svg><input id="global-search" autocomplete="off" type="search" placeholder="Find any topic..." aria-label="Search all topics"><kbd>/</kbd></label><span class="topbar-divider"></span><span class="avatar" aria-label="Your local workspace">OS</span></div>
+    </header>
+    <main class="main" id="view-root" tabindex="-1"></main>
+    <footer class="footer"><span>OOP STUDIO <span class="footer-dot">●</span> BUILT FOR DEEP UNDERSTANDING</span><span>Progress stays on this device. No login. No tracking.</span></footer>
+  </div>
+</div>
+<dialog class="topic-dialog" id="topic-dialog" aria-label="Topic study panel"><div id="topic-dialog-body"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<input id="import-file" type="file" accept="application/json,.json" hidden>
+</body>
+</html>
